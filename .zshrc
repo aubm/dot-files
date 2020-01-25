@@ -17,7 +17,7 @@ antigen bundle sudo
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Antigen theme
-antigen theme robbyrussell
+antigen theme geoffgarside
 
 # Tell antigen that you're done
 antigen apply
