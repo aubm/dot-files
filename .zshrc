@@ -28,12 +28,6 @@ source ~/.fzf.zsh
 
 #source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/usr/local/google-cloud-sdk/completion.zsh.inc'
-
 export PATH=~/scripts:$PATH
 
 # Set environnement variables
@@ -52,3 +46,9 @@ alias chrome='/usr/bin/open -a "/Applications/Google Chrome.app" $1'
 alias json="python -mjson.tool"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
