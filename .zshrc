@@ -31,11 +31,7 @@ source ~/.fzf.zsh
 export PATH=~/scripts:$PATH
 
 # Set environnement variables
-export GOROOT=$HOME/go/go1.12.6
-export GOPATH=$HOME/Developpements/go_code
-export PATH=$HOME/bin:/usr/local/bin:$GOROOT/bin:$GOPATH/bin:$PATH
-
-export PATH=$PATH:$HOME/go_appengine
+export PATH="$HOME/bin:/usr/local/bin:$(go env GOPATH)/bin:$PATH"
 
 # iterm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
